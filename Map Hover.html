@@ -1,0 +1,52 @@
+<h1 style="font-size: 75px; color: white; text-align: center;"><Font face ="Georgia">MAP HOVER</h1>
+<style>
+    button
+    {
+        font-size: 20px;
+        padding: 15px;
+        border-color: white;
+        border-radius: 100px;
+        margin: 20px;
+        background-color: skyblue;
+        color: white;
+    }
+    #buttons
+    {
+        text-align: center;
+    }
+</style>
+<body style = "background-color: skyblue;">
+    <p align="center"><img id="places_img" onclick="" src="map-original.png" style="width: 900px; height: 650px;"></p>
+    <div id ="buttons">
+        <button id = "btnOffice" onmouseover="officePlace()" onmouseout="defaultMap()">Offices</button>
+        <button id = "btnCountrySide" onmouseover="countrySidePlace()" onmouseout="defaultMap()">Countryside</button>
+        <button id = "btnPlayground" onmouseover="playgroundPlace()" onmouseout="defaultMap()">Playground</button>
+        <button id = "btnHouse" onmouseover="housePlace()" onmouseout="defaultMap()">House</button>
+        <button id = "industriesPlace" onmouseover="industriesPlace()" onmouseout="defaultMap()">Industries</button>
+</div>
+</body>
+<script>
+    function defaultMap(){
+        document.getElementById("places_img").src = 'map-original.png';
+    }
+
+    function officePlace(){
+        document.getElementById("places_img").src = 'map-blue.png';
+    }
+
+    function countrySidePlace(){
+        document.getElementById("places_img").src = 'map-red.png';
+    }
+
+    function playgroundPlace(){
+        document.getElementById("places_img").src = 'map-green.png';
+    }
+
+    function housePlace(){
+        document.getElementById("places_img").src = 'map-yellow.png';
+    }
+
+    function industriesPlace(){
+        document.getElementById("places_img").src = 'map-pink.png';
+    }
+</script>
